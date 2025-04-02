@@ -359,7 +359,7 @@ print(board1)
 del board1[1]
 print(board1)
 
-# 튜플은 인덱스가 아니라 키값으로 찾는다
+# 딕셔너리는 인덱스가 아니라 키값으로 찾는다
 grade = {'pey':10,'juliet':99}
 print(grade['pey'])
 # 키에는 리스트를 쓸 수 없지만 튜플은 쓸 수 있다
