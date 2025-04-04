@@ -308,3 +308,58 @@ except TypeError:
     print('n은 iterator 객체가 아닙니다')
 else:
     print('n은 iterator 객체 입니다')
+
+lst = [10,20,30]
+l_iter = iter(lst)
+type(l_iter)
+next(l_iter)
+r_iter = iter(range(3))
+# next 함수를 통해 다음에 접근할 수 있다.
+for i in r_iter:
+    print(i, end=' ')
+
+class Counter:
+    def __init__(self, stop): # 파이썬 클래스는 무조건 첫번째 파라미터는 self로 받음
+        self.current = 0
+        self.stop = stop
+    
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.current < self.stop:
+            r = self.current
+            self.current +=1
+            return r
+        else:
+            raise StopIteration
+for i in Counter(3):
+    print(i, end=' ')
+
+class oddCounter:
+    "1부터 증가하는 홀수를 반환하는 클래스"
+    def __init__(self,n=1):#초기화 메소드, n을 1로 둔다
+        self.n = n
+    def __iter__(self): # 반복자는 __iter__()함수를 가져야함
+        return self
+    def __next__(self):
+        t= self.n
+        self.n +=2
+        return t
+
+# 클래스 선언에 대한 설명 추가해줘
+class oddCounter:
+    "1부터 증가하는 홀수를 반환하는 클래스"
+    def __init__(self,n=1):
+        self.n = n
+    def __iter__(self):
+        return self
+    def __next__(self):
+        t = self.n
+        self.n +=2
+        if t<20:
+            return t
+        else:
+            raise StopIteration # 반복 중단
+my_counter = oddCounter()
+for i in my_counter:
+        print(i)
