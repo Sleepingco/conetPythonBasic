@@ -1,0 +1,3 @@
+hong	seoul	010
+kang	gwan	011
+lee	jun	031
