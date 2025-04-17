@@ -1,0 +1,4 @@
+파이썬 개요,역사,컴파일러,인터프리터,정적,동적타이핑, 설명, 설치,환경변수
+아나콘다 설치, 환경변수, 개요, 명령어(conda envlist, create -n myenv python=3.8,  init, activate myenv, decativate
+명령프롬프트 간단 명령어 'mkdir,dir,cd,code .' , 
+파이썬 스트링,따옴표 3개,
