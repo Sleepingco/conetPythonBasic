@@ -19,6 +19,7 @@ def on_trackbar(pos):
     rmax = cv2.getTrackbarPos('maxRadius', 'img')
     th = cv2.getTrackbarPos('threshold', 'img')
     # circles = (cx,cy,r)
+    # HOUGH_GRADIENT_ALT는 더욱 정확하지만 threshold 값을 잘 바꿔줘야함 0~1
     circles = cv2.HoughCircles(blr, cv2.HOUGH_GRADIENT, 1, 50,
                                param1=120, param2=th, minRadius=rmin, maxRadius=rmax)
 
