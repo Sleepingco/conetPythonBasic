@@ -30,11 +30,11 @@ if digits is None:
     print('Image load failed!')
     sys.exit()
 
-h, w = digits.shape[:2]
+h, w = digits.shape[:2] # h:1000, w:2000 h//20 = 1000//02 => 50 w//20 = 2000/20 => 100
 
 cells = [np.hsplit(row, w//20) for row in np.vsplit(digits, h//20)]
 cells = np.array(cells)
-print('cells shape: ', cells.shape)
+print('cells shape: ', cells.shape) # 2차원 배열인데 3차원 배열로 바꾸고  5000x400개의 배열로 바꿈
 train_images = cells.reshape(-1, 400).astype(np.float32)
 print ('trains_images.shpae:', train_images.shape)
 train_labels = np.repeat(np.arange(10), len(train_images)/10)
