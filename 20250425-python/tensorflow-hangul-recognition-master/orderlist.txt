@@ -1,0 +1,5 @@
+ pip install -r requirements.txt
+
+pip uninstall numpy==1.21.6
+pip install numpy==1.12.1
+https://opencv-master.tistory.com/124
