@@ -20,3 +20,17 @@
 *.meta
 *.tar.gz
 *.zip
+
+# 대용량 모델 파일 무시
+20250425-python/googlenet/
+20250425-python/EAST/
+20250425-python/openpose/
+20250425-python/yolo_v3/
+20250425-python/tensorflow-hangul-recognition-master/saved-model/
+
+# 파일 크기 큰 확장자 무시
+*.caffemodel
+*.pb
+*.tar.gz
+*.weights
+*.data-00000-of-00001
