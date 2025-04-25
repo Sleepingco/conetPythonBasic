@@ -1,5 +1,22 @@
-20250425-python/tensorflow-hangul-recognition-master/image-data
-20250425-python/tensorflow-hangul-recognition-master/fonts
+# tensorflow-hangul-recognition-master 내의 이미지 데이터 및 폰트 제외
+20250425-python/tensorflow-hangul-recognition-master/image-data/
+20250425-python/tensorflow-hangul-recognition-master/fonts/
+
+# tensorflow-hangul-recognition-master 전체 폴더 제외 (단, 위 폴더만 따로 제외하고 싶으면 이 줄은 생략 가능)
 20250425-python/tensorflow-hangul-recognition-master/
-20250425-python/yolo3
-20250425-python/openpose
+
+# YOLO 모델 관련 폴더 무시
+20250425-python/yolo3/
+
+# OpenPose 관련 폴더 무시
+20250425-python/openpose/
+
+# 확장자 기반 무시 (모델 파일 및 바이너리)
+*.pb
+*.caffemodel
+*.weights
+*.data-00000-of-00001
+*.index
+*.meta
+*.tar.gz
+*.zip
